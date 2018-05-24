@@ -21,6 +21,14 @@ namespace Agenda
                 Console.WriteLine("3 - Sair");
                 opcao = int.Parse(Console.ReadLine());
 
+                if (opcao == 1)
+                {
+                    Console.WriteLine("Nome :");
+                    string nome = Console.ReadLine();
+                    dadosPessoa.pesquisarPessoa(nome);
+                }
+
+
                 if (opcao == 2)
                 {
                     Console.WriteLine("Nome :");

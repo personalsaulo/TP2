@@ -10,18 +10,23 @@ namespace Agenda
     {
         public string Nome { get; set; }
         public DateTime DataDeNascimento { get; set; }
-
-
+        public List<Pessoa> listaPessoa = new List<Pessoa>();
 
 
 
 
         public void AdicionarNome(Pessoa dadosDaPessoa)
         {
-            List<Pessoa> listaPessoa = new List<Pessoa>();
             listaPessoa.Add(dadosDaPessoa);
-
         }
 
+        public void pesquisarPessoa(string nome)
+        {
+            for (int i = 0; i <= listaPessoa.Count - 1; i++)
+            {
+                if (listaPessoa[i].Nome == nome)
+                    Console.WriteLine("resultado: Nome " + listaPessoa[i].Nome + " Data de aniversario: " + listaPessoa[i].DataDeNascimento);
+            }
+        }
     }
 }
